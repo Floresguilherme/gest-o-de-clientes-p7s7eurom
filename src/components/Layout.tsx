@@ -23,6 +23,7 @@ import {
   Search,
 } from 'lucide-react'
 import { Input } from './ui/input'
+import { Label } from '@/components/ui/label'
 
 const menuItems = [
   { icon: LayoutDashboard, label: 'Painel', path: '/painel' },

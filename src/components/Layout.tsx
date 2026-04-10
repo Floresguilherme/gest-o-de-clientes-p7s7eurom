@@ -31,13 +31,13 @@ const menuItems = [
   { icon: MessageCircle, label: 'WhatsApp Central', path: '/whatsapp', badge: '3' },
   { icon: Users, label: 'CRM / Clientes', path: '/clientes' },
   { icon: UserPlus, label: 'Colaboradores', path: '/profissionais' },
-  { icon: DollarSign, label: 'Financeiro', path: '/financeiro' },
-  { icon: Archive, label: 'Caixa', path: '/caixa' },
-  { icon: Package, label: 'Pacotes', path: '/pacotes' },
   { icon: ClipboardList, label: 'Serviços', path: '/servicos' },
+  { icon: Package, label: 'Pacotes', path: '/pacotes' },
+  { icon: DollarSign, label: 'Pagamentos', path: '/pagamentos' },
+  { icon: BarChart, label: 'Comissões', path: '/comissoes' },
+  { icon: Archive, label: 'Caixa', path: '/caixa' },
   { icon: Megaphone, label: 'Marketing e Indicações', path: '/marketing' },
   { icon: RefreshCcw, label: 'Retenção Inteligente', path: '/retencao' },
-  { icon: BarChart, label: 'Relatórios', path: '/relatorios' },
   { icon: Settings, label: 'Configurações', path: '/configuracoes' },
 ]
 

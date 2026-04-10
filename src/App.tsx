@@ -9,6 +9,9 @@ import ClientesPage from './pages/clientes/Index'
 import ProfissionaisPage from './pages/profissionais/Index'
 import ServicosPage from './pages/servicos/Index'
 import PacotesPage from './pages/pacotes/Index'
+import AgendamentosPage from './pages/agendamentos/Index'
+import PagamentosPage from './pages/pagamentos/Index'
+import ComissoesPage from './pages/comissoes/Index'
 import NotFound from './pages/NotFound'
 
 const App = () => (
@@ -24,13 +27,15 @@ const App = () => (
             <Route path="/profissionais" element={<ProfissionaisPage />} />
             <Route path="/servicos" element={<ServicosPage />} />
             <Route path="/pacotes" element={<PacotesPage />} />
+            <Route path="/agenda" element={<AgendamentosPage />} />
+            <Route path="/pagamentos" element={<PagamentosPage />} />
+            <Route path="/comissoes" element={<ComissoesPage />} />
 
             {/* Redirects for unimplemented sidebar links to avoid 404 while navigating */}
             <Route path="/painel" element={<Navigate to="/clientes" replace />} />
-            <Route path="/agenda" element={<Navigate to="/clientes" replace />} />
             <Route path="/whatsapp" element={<Navigate to="/clientes" replace />} />
             <Route path="/colaboradores" element={<Navigate to="/clientes" replace />} />
-            <Route path="/financeiro" element={<Navigate to="/clientes" replace />} />
+            <Route path="/financeiro" element={<Navigate to="/pagamentos" replace />} />
             <Route path="/caixa" element={<Navigate to="/clientes" replace />} />
             <Route path="/estoque" element={<Navigate to="/clientes" replace />} />
             <Route path="/marketing" element={<Navigate to="/clientes" replace />} />

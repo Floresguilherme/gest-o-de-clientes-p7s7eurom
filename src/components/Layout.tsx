@@ -30,10 +30,10 @@ const menuItems = [
   { icon: Calendar, label: 'Agenda Global', path: '/agenda' },
   { icon: MessageCircle, label: 'WhatsApp Central', path: '/whatsapp', badge: '3' },
   { icon: Users, label: 'CRM / Clientes', path: '/clientes' },
-  { icon: UserPlus, label: 'Colaboradores', path: '/colaboradores' },
+  { icon: UserPlus, label: 'Colaboradores', path: '/profissionais' },
   { icon: DollarSign, label: 'Financeiro', path: '/financeiro' },
   { icon: Archive, label: 'Caixa', path: '/caixa' },
-  { icon: Package, label: 'Estoque e Materiais', path: '/estoque' },
+  { icon: Package, label: 'Pacotes', path: '/pacotes' },
   { icon: ClipboardList, label: 'Serviços', path: '/servicos' },
   { icon: Megaphone, label: 'Marketing e Indicações', path: '/marketing' },
   { icon: RefreshCcw, label: 'Retenção Inteligente', path: '/retencao' },
@@ -53,16 +53,14 @@ export default function Layout() {
   return (
     <div className="flex h-screen bg-background overflow-hidden font-sans text-foreground">
       {/* Sidebar */}
-      <aside className="w-64 bg-sidebar-background border-r flex flex-col hidden md:flex shrink-0">
+      <aside className="w-64 bg-[#6B7280] border-r border-[#6B7280] flex flex-col hidden md:flex shrink-0 text-white shadow-md">
         <div className="p-6 flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground font-bold">
+          <div className="w-8 h-8 rounded-md bg-[#3B82F6] flex items-center justify-center text-white font-bold">
             CT
           </div>
           <div>
-            <h1 className="font-bold text-sm leading-tight text-sidebar-foreground">
-              Cássia Trott
-            </h1>
-            <p className="text-xs text-muted-foreground">Estética e Escola</p>
+            <h1 className="font-bold text-sm leading-tight text-white">Cássia Trott</h1>
+            <p className="text-xs text-gray-200">Estética e Escola</p>
           </div>
         </div>
 
@@ -75,8 +73,8 @@ export default function Layout() {
                 to={item.path}
                 className={`flex items-center justify-between px-3 py-2.5 rounded-md text-sm transition-colors ${
                   isActive
-                    ? 'bg-primary/10 text-primary font-medium'
-                    : 'text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-foreground'
+                    ? 'bg-[#3B82F6] text-white font-medium'
+                    : 'text-gray-100 hover:bg-gray-600 hover:text-white'
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -93,10 +91,10 @@ export default function Layout() {
           })}
         </nav>
 
-        <div className="p-4 border-t mt-auto">
+        <div className="p-4 border-t border-gray-600 mt-auto">
           <Link
             to="/ajuda"
-            className="flex items-center gap-3 px-3 py-2 text-sm text-sidebar-foreground/70 hover:text-sidebar-foreground transition-colors"
+            className="flex items-center gap-3 px-3 py-2 text-sm text-gray-200 hover:text-white transition-colors"
           >
             <BookOpen className="w-4 h-4" />
             Manual de Ajuda

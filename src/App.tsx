@@ -6,6 +6,9 @@ import { AuthProvider } from '@/hooks/use-auth'
 import Layout from './components/Layout'
 import Index from './pages/Index'
 import ClientesPage from './pages/clientes/Index'
+import ProfissionaisPage from './pages/profissionais/Index'
+import ServicosPage from './pages/servicos/Index'
+import PacotesPage from './pages/pacotes/Index'
 import NotFound from './pages/NotFound'
 
 const App = () => (
@@ -18,6 +21,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route element={<Layout />}>
             <Route path="/clientes" element={<ClientesPage />} />
+            <Route path="/profissionais" element={<ProfissionaisPage />} />
+            <Route path="/servicos" element={<ServicosPage />} />
+            <Route path="/pacotes" element={<PacotesPage />} />
 
             {/* Redirects for unimplemented sidebar links to avoid 404 while navigating */}
             <Route path="/painel" element={<Navigate to="/clientes" replace />} />
@@ -27,7 +33,6 @@ const App = () => (
             <Route path="/financeiro" element={<Navigate to="/clientes" replace />} />
             <Route path="/caixa" element={<Navigate to="/clientes" replace />} />
             <Route path="/estoque" element={<Navigate to="/clientes" replace />} />
-            <Route path="/servicos" element={<Navigate to="/clientes" replace />} />
             <Route path="/marketing" element={<Navigate to="/clientes" replace />} />
             <Route path="/retencao" element={<Navigate to="/clientes" replace />} />
             <Route path="/relatorios" element={<Navigate to="/clientes" replace />} />
